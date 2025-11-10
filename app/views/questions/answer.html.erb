@@ -1,8 +1,25 @@
-<h1>ANSWER</h1>
-
-<% if @question.present? %>
-  <p>Your Question: <%= @question  %></p>
-  <p>Coach's Answer: <%= @reply %></p>
-<% end %>
-
-<h3><%= link_to "Ask a new question", ask_path %></h3>
+<div class="container-fluid answer-page d-flex flex-column justify-content-center align-items-center text-center">
+  <div class="bg-white bg-opacity-25 p-4 rounded-3 shadow-lg">
+    <h1 class="display-1 fw-bold text-dark mb-2">ANSWER</h1>
+    <% if @question.present? %>
+      <p class="fs-2 fw-semibold text-dark" style="font-family: 'Poppins', sans-serif;">
+        Your Question: <%= @question %>
+      </p>
+      <p class="fs-2 fw-semibold text-dark" style="font-family: 'Poppins', sans-serif;">
+        Coach's Answer: <%= @reply %>
+      </p>
+    <% end %>
+    <%= link_to ask_path, class: "btn btn-warning btn-lg mt-4 px-5 py-3 fs-4" do %>
+      <i class="fa-solid fa-house"></i>
+    <% end %>
+  </div>
+</div>
+<style>
+  .answer-page {
+    min-height: 100vh;
+    background-image: url("https://occ-0-8407-2219.1.nflxso.net/dnm/api/v6/Z-WHgqd_TeJxSuha8aZ5WpyLcX8/AAAABb1oMoF4meHpFgHTOxRKkjKusDmf-w5DW-GQ0sWCYvz-aL6TA1NXOdzNHdXGkHWo1RJba9B5gwVYCYKaZMvpRGystzv96ITttcGt.jpg?r=3e7");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+</style>

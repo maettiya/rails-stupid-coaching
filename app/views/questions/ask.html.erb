@@ -1,9 +1,23 @@
-<h1>ASK</h1>
-
-<h3><%#= link_to "Answer", answer_path %></h3>
-
-<form action="/answer" data-turbo="false" method="get">
-  <label for="question">Your question</label>
-  <input type="text" id="question" name="question" placeholder="Ask a question...">
-  <input type="submit" value="Ask!">
-</form>
+<div class="container-fluid bg-warning min-vh-100 d-flex flex-column justify-content-center align-items-center text-center">
+  <h1 class="display-1 fw-bold text-dark mb-5">ASK</h1>
+  <form action="/answer" data-turbo="false" method="get" class="w-60 w-md-50">
+    <div class="input-group input-group-lg shadow-sm">
+      <input
+        type="text"
+        id="question"
+        name="question"
+        class="form-control border-0 px-4 py-3"
+        placeholder="Ask a question..."
+        style="border-radius: 4px 0 0 4px;"
+        required
+      >
+        <button
+        type="submit"
+        class="btn btn-dark px-5 fw-semibold"
+        style="border-radius: 0 4px 4px 0;"
+      >
+          Ask!
+        </button>
+      </div>
+    </form>
+  </div>
