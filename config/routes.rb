@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   # root "posts#index"
   #
   get "ask", to: "questions#ask"
+  get "answer", to: "questions#answer"
 end

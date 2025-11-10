@@ -1,0 +1,8 @@
+<h1>ANSWER</h1>
+
+<% if @question.present? %>
+  <p>Your Question: <%= @question  %></p>
+  <p>Coach's Answer: <%= @reply %></p>
+<% end %>
+
+<h3><%= link_to "Ask a new question", ask_path %></h3>

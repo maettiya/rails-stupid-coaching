@@ -1,7 +1,9 @@
 <h1>ASK</h1>
 
-<form action="???" data-turbo="false">
+<h3><%#= link_to "Answer", answer_path %></h3>
+
+<form action="/answer" data-turbo="false" method="get">
   <label for="question">Your question</label>
-  <input type="text" id="question" name="???">
+  <input type="text" id="question" name="question" placeholder="Ask a question...">
   <input type="submit" value="Ask!">
 </form>
